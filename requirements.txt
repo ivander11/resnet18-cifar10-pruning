@@ -1,0 +1,7 @@
+torch
+torchvision
+torch-pruning
+numpy
+matplotlib
+tqdm
+jupyter
