@@ -4,7 +4,7 @@ I built this project for a "Introduction to Intelligent Control" course presenta
 
 The goal was to see how much I could compress a standard ResNet-18 model without completely destroying its accuracy. I used the [Torch-Pruning](https://github.com/VainF/Torch-Pruning) library to perform structural pruning, removing the least important filters based on their L2 norm.
 
-## 🏆 Key Results
+## Key Results
 
 | Metric | Original Model | Pruned Model | Change |
 | :--- | :---: | :---: | :---: |
@@ -17,7 +17,7 @@ The goal was to see how much I could compress a standard ResNet-18 model without
 ![Pruning Results](results.png)
 *(Run the notebook to generate this plot)*
 
-## ⚙️ How it works
+## How it works
 
 The project follows a standard "Train, Prune, Fine-tune" pipeline:
 
@@ -27,7 +27,7 @@ The project follows a standard "Train, Prune, Fine-tune" pipeline:
     * After each pruning step, I retrained for 1 epoch to stabilize the model.
     * At the very end (when the model was tiny but accuracy had dropped to ~10%), I ran a final 10-epoch fine-tuning which brought the accuracy back up to 84.70%.
 
-## 💻 How to Run
+## How to Run
 
 1.  **Clone the repo:**
     ```bash
@@ -43,7 +43,7 @@ The project follows a standard "Train, Prune, Fine-tune" pipeline:
 3.  **Run the Notebook:**
     Open `Neural_Network_Pruning.ipynb` in Jupyter or Google Colab and run all cells.
 
-## 📚 References
+## References
 * Course: Introduction to Intelligent Control
 * Pruning Library: [Torch-Pruning](https://github.com/VainF/Torch-Pruning)
 * Based on this [Medium Tutorial](https://medium.com/@arikpoznanski/neural-network-pruning-how-to-accelerate-inference-with-minimal-accuracy-loss-936cad741c2a) 
